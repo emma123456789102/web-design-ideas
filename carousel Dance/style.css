@@ -1,3 +1,5 @@
+/* GENERAL RESET */
+
 * {
   box-sizing: border-box;
 }
@@ -13,10 +15,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NAVIGATION */
+
+/* NAVIGATION BAR */
 
 .navbar {
-  min-height: 72px;
+  width: 100%;
+  min-height: 76px;
   padding: 14px 5%;
   display: flex;
   align-items: center;
@@ -28,7 +32,7 @@ body {
 
 .logo {
   color: #c8ff38;
-  font-size: 29px;
+  font-size: 30px;
   font-weight: 900;
   text-decoration: none;
 }
@@ -36,7 +40,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 .nav-links a {
@@ -48,21 +52,32 @@ body {
   color: #c8ff38;
 }
 
-/* HERO */
+
+/* HERO SECTION */
 
 .hero {
-  min-height: 360px;
-  padding: 60px 7%;
+  width: 100%;
+  min-height: 380px;
+  padding: 65px 7%;
   display: flex;
   align-items: center;
   color: white;
   background:
-    radial-gradient(circle at 85% 30%, #c8ff38 0 7%, transparent 7.5%),
-    radial-gradient(circle at 75% 65%, #ec4899 0 11%, transparent 11.5%),
+    radial-gradient(
+      circle at 85% 30%,
+      #c8ff38 0 7%,
+      transparent 7.5%
+    ),
+    radial-gradient(
+      circle at 75% 65%,
+      #ec4899 0 11%,
+      transparent 11.5%
+    ),
     linear-gradient(120deg, #6d28d9, #9d174d);
 }
 
 .hero > div {
+  width: 100%;
   max-width: 760px;
 }
 
@@ -77,7 +92,7 @@ body {
 
 .hero h1 {
   margin: 12px 0;
-  font-size: clamp(44px, 7vw, 78px);
+  font-size: clamp(44px, 7vw, 80px);
   line-height: 1;
 }
 
@@ -91,7 +106,7 @@ body {
 
 .hero-button {
   display: inline-block;
-  padding: 14px 23px;
+  padding: 14px 24px;
   color: #17171c;
   background: #c8ff38;
   border-radius: 30px;
@@ -99,36 +114,47 @@ body {
   text-decoration: none;
 }
 
-/* PAGE AND SIDEBAR */
-
-.page-layout {
-  max-width: 1600px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+.hero-button:hover {
+  background: white;
 }
 
+
+/* PAGE LAYOUT */
+
+.page-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+
+/* SIDEBAR */
+
 .sidebar {
-  min-height: 760px;
-  padding: 35px 25px;
+  min-height: 100vh;
+  padding: 40px 30px;
   background: white;
-  border-right: 1px solid #ddddE5;
+  border-right: 1px solid #dddde5;
 }
 
 .sidebar h2 {
-  margin-top: 0;
+  margin: 0 0 25px;
+  font-size: 28px;
 }
 
 .sidebar h3 {
-  margin-top: 35px;
-  font-size: 15px;
+  margin-top: 40px;
+  color: #70707b;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .sidebar a {
   display: block;
-  margin: 17px 0;
+  margin: 18px 0;
   color: #4b4b55;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -136,33 +162,40 @@ body {
   color: #6d28d9;
 }
 
+
+/* MAIN CONTENT */
+
 .main-content {
+  width: 100%;
   min-width: 0;
-  padding: 45px 35px 70px;
+  padding: 50px 4% 80px;
 }
 
 .section-heading {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .section-heading p {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   color: #6d28d9;
   font-weight: 800;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .section-heading h2 {
   margin: 0;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(32px, 4vw, 50px);
 }
+
 
 /* THREE CARDS */
 
 .level-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .level-card {
@@ -175,12 +208,15 @@ body {
   box-shadow: 0 12px 35px rgb(0 0 0 / 10%);
 }
 
+
+/* LEVEL LABELS */
+
 .level-tag {
   position: absolute;
   z-index: 5;
   top: 18px;
   left: 18px;
-  padding: 8px 14px;
+  padding: 9px 15px;
   color: white;
   border-radius: 30px;
   font-size: 13px;
@@ -201,10 +237,11 @@ body {
   background: #be123c;
 }
 
-/* INDIVIDUAL SLIDES */
+
+/* CAROUSEL SLIDES */
 
 .slides {
-  height: 470px;
+  height: 520px;
 }
 
 .slide {
@@ -232,16 +269,19 @@ body {
   transform: scale(1.03);
 }
 
+
+/* LESSON INFORMATION */
+
 .lesson-information {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 100px 24px 26px;
+  padding: 110px 26px 28px;
   color: white;
   background: linear-gradient(
     transparent,
-    rgb(0 0 0 / 92%)
+    rgb(0 0 0 / 94%)
   );
 }
 
@@ -256,10 +296,12 @@ body {
 
 .lesson-information h3 {
   margin: 0 0 10px;
-  font-size: 29px;
+  font-size: 30px;
+  line-height: 1.1;
 }
 
 .lesson-information p {
+  margin-bottom: 12px;
   line-height: 1.5;
 }
 
@@ -271,19 +313,24 @@ body {
   text-decoration: none;
 }
 
-/* CAROUSEL CONTROLS */
+.lesson-information a:hover {
+  color: white;
+}
+
+
+/* CAROUSEL BUTTONS */
 
 .controls {
-  min-height: 75px;
-  padding: 15px 20px;
+  min-height: 80px;
+  padding: 16px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .controls button {
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   border: 0;
   border-radius: 50%;
   color: white;
@@ -313,16 +360,23 @@ body {
   font-weight: 700;
 }
 
+
 /* FOOTER */
 
 footer {
-  padding: 28px;
+  width: 100%;
+  padding: 30px;
   color: white;
   background: #17171c;
   text-align: center;
 }
 
-/* SLIDE ANIMATION */
+footer p {
+  margin: 0;
+}
+
+
+/* CAROUSEL ANIMATION */
 
 @keyframes change-slide {
   from {
@@ -336,18 +390,33 @@ footer {
   }
 }
 
+
+/* SMALLER DESKTOPS */
+
+@media (max-width: 1250px) {
+  .level-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .level-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+
 /* TABLETS */
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .page-layout {
     display: block;
   }
 
   .sidebar {
     min-height: auto;
-    padding: 15px 25px;
+    padding: 18px 25px;
+    overflow-x: auto;
     border-right: 0;
-    border-bottom: 1px solid #ddddE5;
+    border-bottom: 1px solid #dddde5;
   }
 
   .sidebar h2,
@@ -356,23 +425,24 @@ footer {
   }
 
   .sidebar-links {
+    width: max-content;
     display: flex;
-    gap: 25px;
+    gap: 28px;
   }
 
   .sidebar-links a {
     margin: 5px 0;
   }
 
-  .level-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .main-content {
+    padding: 45px 28px 70px;
   }
 
   .level-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 12px);
+    grid-column: auto;
   }
 }
+
 
 /* PHONES */
 
@@ -380,41 +450,56 @@ footer {
   .navbar {
     align-items: flex-start;
     flex-direction: column;
+    padding: 18px 24px;
   }
 
   .nav-links {
     width: 100%;
-    gap: 18px;
+    gap: 20px;
     overflow-x: auto;
+    padding-bottom: 5px;
   }
 
   .hero {
-    min-height: 330px;
-    padding: 45px 24px;
+    min-height: 350px;
+    padding: 48px 24px;
   }
 
-  .sidebar {
-    overflow-x: auto;
-  }
-
-  .sidebar-links {
-    width: max-content;
+  .hero h1 {
+    font-size: 48px;
   }
 
   .main-content {
-    padding: 35px 18px 55px;
+    padding: 38px 18px 60px;
   }
 
   .level-grid {
     grid-template-columns: 1fr;
-  }
-
-  .level-card:last-child {
-    grid-column: auto;
-    width: auto;
+    gap: 25px;
   }
 
   .slides {
     height: 500px;
+  }
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .slides {
+    height: 460px;
+  }
+
+  .lesson-information h3 {
+    font-size: 26px;
   }
 }
