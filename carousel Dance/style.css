@@ -1,0 +1,420 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #17171c;
+  background: #f5f5f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  min-height: 72px;
+  padding: 14px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: white;
+  background: #17171c;
+}
+
+.logo {
+  color: #c8ff38;
+  font-size: 29px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #c8ff38;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 360px;
+  padding: 60px 7%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    radial-gradient(circle at 85% 30%, #c8ff38 0 7%, transparent 7.5%),
+    radial-gradient(circle at 75% 65%, #ec4899 0 11%, transparent 11.5%),
+    linear-gradient(120deg, #6d28d9, #9d174d);
+}
+
+.hero > div {
+  max-width: 760px;
+}
+
+.hero-label {
+  margin: 0;
+  color: #c8ff38;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 12px 0;
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: 1;
+}
+
+.hero-description {
+  max-width: 570px;
+  margin-bottom: 30px;
+  color: #f3e8ff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 23px;
+  color: #17171c;
+  background: #c8ff38;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* PAGE AND SIDEBAR */
+
+.page-layout {
+  max-width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.sidebar {
+  min-height: 760px;
+  padding: 35px 25px;
+  background: white;
+  border-right: 1px solid #ddddE5;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar h3 {
+  margin-top: 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  display: block;
+  margin: 17px 0;
+  color: #4b4b55;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #6d28d9;
+}
+
+.main-content {
+  min-width: 0;
+  padding: 45px 35px 70px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading p {
+  margin-bottom: 8px;
+  color: #6d28d9;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+/* THREE CARDS */
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.level-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e4e4eb;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgb(0 0 0 / 10%);
+}
+
+.level-tag {
+  position: absolute;
+  z-index: 5;
+  top: 18px;
+  left: 18px;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.beginner-tag {
+  background: #6d28d9;
+}
+
+.intermediate-tag {
+  background: #ea580c;
+}
+
+.advanced-tag {
+  background: #be123c;
+}
+
+/* INDIVIDUAL SLIDES */
+
+.slides {
+  height: 470px;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+}
+
+.slide.active {
+  display: block;
+  animation: change-slide 350ms ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.level-card:hover .slide.active img {
+  transform: scale(1.03);
+}
+
+.lesson-information {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 100px 24px 26px;
+  color: white;
+  background: linear-gradient(
+    transparent,
+    rgb(0 0 0 / 92%)
+  );
+}
+
+.lesson-number {
+  margin: 0 0 8px;
+  color: #c8ff38;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.lesson-information h3 {
+  margin: 0 0 10px;
+  font-size: 29px;
+}
+
+.lesson-information p {
+  line-height: 1.5;
+}
+
+.lesson-information a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #c8ff38;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* CAROUSEL CONTROLS */
+
+.controls {
+  min-height: 75px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls button {
+  width: 45px;
+  height: 45px;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  background: #17171c;
+  font-size: 21px;
+  cursor: pointer;
+  transition:
+    color 200ms ease,
+    background 200ms ease,
+    transform 200ms ease;
+}
+
+.controls button:hover {
+  color: #17171c;
+  background: #c8ff38;
+  transform: scale(1.08);
+}
+
+.controls button:focus-visible {
+  outline: 3px solid #6d28d9;
+  outline-offset: 3px;
+}
+
+.controls span {
+  color: #666674;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 28px;
+  color: white;
+  background: #17171c;
+  text-align: center;
+}
+
+/* SLIDE ANIMATION */
+
+@keyframes change-slide {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+  .page-layout {
+    display: block;
+  }
+
+  .sidebar {
+    min-height: auto;
+    padding: 15px 25px;
+    border-right: 0;
+    border-bottom: 1px solid #ddddE5;
+  }
+
+  .sidebar h2,
+  .sidebar-section {
+    display: none;
+  }
+
+  .sidebar-links {
+    display: flex;
+    gap: 25px;
+  }
+
+  .sidebar-links a {
+    margin: 5px 0;
+  }
+
+  .level-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .level-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+  }
+}
+
+/* PHONES */
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 18px;
+    overflow-x: auto;
+  }
+
+  .hero {
+    min-height: 330px;
+    padding: 45px 24px;
+  }
+
+  .sidebar {
+    overflow-x: auto;
+  }
+
+  .sidebar-links {
+    width: max-content;
+  }
+
+  .main-content {
+    padding: 35px 18px 55px;
+  }
+
+  .level-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .level-card:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .slides {
+    height: 500px;
+  }
+}

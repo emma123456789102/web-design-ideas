@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StepUp — Learn to Dance</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <a class="logo" href="#">StepUp</a>
+
+    <div class="nav-links">
+      <a href="#">Discover</a>
+      <a href="#">Instructors</a>
+      <a href="#">My Lessons</a>
+    </div>
+  </nav>
+
+  <!-- Hero area -->
+  <header class="hero">
+    <div>
+      <p class="hero-label">Dance at your level</p>
+      <h1>Find your next dance lesson</h1>
+      <h2> Please Note: this is a demo website</h2>
+      <p class="hero-description">
+        Browse Beginner, Intermediate, and Advanced dance lessons.
+      </p>
+      <a class="hero-button" href="#dance-levels">Explore lessons</a>
+    </div>
+  </header>
+
+  <!-- Sidebar and main content -->
+  <div class="page-layout">
+
+    <!-- Optional side panel -->
+    <aside class="sidebar">
+      <h2>Explore</h2>
+
+      <nav class="sidebar-links">
+        <a href="#beginner">Beginner</a>
+        <a href="#intermediate">Intermediate</a>
+        <a href="#advanced">Advanced</a>
+      </nav>
+
+      <div class="sidebar-section">
+        <h3>Dance styles</h3>
+        <a href="#">Hip-Hop</a>
+        <a href="#">Salsa</a>
+        <a href="#">Contemporary</a>
+        <a href="#">Freestyle</a>
+      </div>
+    </aside>
+
+    <!-- Three dance carousels -->
+    <main id="dance-levels" class="main-content">
+
+      <div class="section-heading">
+        <p>Choose a level</p>
+        <h2>Dance lessons for everyone</h2>
+      </div>
+
+      <div class="level-grid">
+
+        <!-- BEGINNER CAROUSEL -->
+        <article
+          class="level-card"
+          id="beginner"
+          data-carousel
+          aria-label="Beginner lessons"
+        >
+          <span class="level-tag beginner-tag">Beginner</span>
+
+          <div class="slides">
+
+            <section class="slide active">
+              <img
+                src="https://placehold.co/800x1000/7c3aed/ffffff?text=Two-Step+Basics"
+                alt="Two-Step Basics lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Beginner lesson</p>
+                <h3>Two-Step Basics</h3>
+                <p>
+                  Learn rhythm, balance, and the foundational two-step.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/db2777/ffffff?text=Beginner+Salsa"
+                alt="Beginner Salsa lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Beginner lesson</p>
+                <h3>Beginner Salsa</h3>
+                <p>
+                  Practice the basic salsa count and your first combination.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/2563eb/ffffff?text=Hip-Hop+Groove"
+                alt="Hip-Hop Groove lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Beginner lesson</p>
+                <h3>Hip-Hop Groove</h3>
+                <p>
+                  Build confidence with bounce, rhythm, and simple grooves.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+          </div>
+
+          <div class="controls">
+            <button
+              type="button"
+              data-previous
+              aria-label="Show previous Beginner lesson"
+            >
+              ←
+            </button>
+
+            <span data-counter aria-live="polite">1 of 3</span>
+
+            <button
+              type="button"
+              data-next
+              aria-label="Show next Beginner lesson"
+            >
+              →
+            </button>
+          </div>
+        </article>
+
+        <!-- INTERMEDIATE CAROUSEL -->
+        <article
+          class="level-card"
+          id="intermediate"
+          data-carousel
+          aria-label="Intermediate lessons"
+        >
+          <span class="level-tag intermediate-tag">Intermediate</span>
+
+          <div class="slides">
+
+            <section class="slide active">
+              <img
+                src="https://placehold.co/800x1000/ea580c/ffffff?text=Turns+and+Footwork"
+                alt="Turns and Footwork lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Intermediate lesson</p>
+                <h3>Turns and Footwork</h3>
+                <p>
+                  Combine controlled turns with quicker footwork patterns.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/0891b2/ffffff?text=Contemporary+Flow"
+                alt="Contemporary Flow lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Intermediate lesson</p>
+                <h3>Contemporary Flow</h3>
+                <p>
+                  Connect floor work, direction changes, and expressive movement.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/9333ea/ffffff?text=Hip-Hop+Routine"
+                alt="Hip-Hop Routine lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Intermediate lesson</p>
+                <h3>Hip-Hop Routine</h3>
+                <p>
+                  Learn a complete routine with musicality and texture.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+          </div>
+
+          <div class="controls">
+            <button
+              type="button"
+              data-previous
+              aria-label="Show previous Intermediate lesson"
+            >
+              ←
+            </button>
+
+            <span data-counter aria-live="polite">1 of 3</span>
+
+            <button
+              type="button"
+              data-next
+              aria-label="Show next Intermediate lesson"
+            >
+              →
+            </button>
+          </div>
+        </article>
+
+        <!-- ADVANCED CAROUSEL -->
+        <article
+          class="level-card"
+          id="advanced"
+          data-carousel
+          aria-label="Advanced lessons"
+        >
+          <span class="level-tag advanced-tag">Advanced</span>
+
+          <div class="slides">
+
+            <section class="slide active">
+              <img
+                src="https://placehold.co/800x1000/be123c/ffffff?text=Advanced+Musicality"
+                alt="Advanced Musicality lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Advanced lesson</p>
+                <h3>Advanced Musicality</h3>
+                <p>
+                  Interpret complex rhythms, accents, and transitions.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/047857/ffffff?text=Performance+Training"
+                alt="Performance Training lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Advanced lesson</p>
+                <h3>Performance Training</h3>
+                <p>
+                  Improve precision, stamina, projection, and stage presence.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+            <section class="slide">
+              <img
+                src="https://placehold.co/800x1000/4338ca/ffffff?text=Freestyle+Lab"
+                alt="Freestyle Lab lesson"
+              >
+
+              <div class="lesson-information">
+                <p class="lesson-number">Advanced lesson</p>
+                <h3>Freestyle Lab</h3>
+                <p>
+                  Develop your own movement vocabulary through improvisation.
+                </p>
+                <a href="#">View lesson →</a>
+              </div>
+            </section>
+
+          </div>
+
+          <div class="controls">
+            <button
+              type="button"
+              data-previous
+              aria-label="Show previous Advanced lesson"
+            >
+              ←
+            </button>
+
+            <span data-counter aria-live="polite">1 of 3</span>
+
+            <button
+              type="button"
+              data-next
+              aria-label="Show next Advanced lesson"
+            >
+              →
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 StepUp</p>
+  </footer>
+
+</body>
+</html>
